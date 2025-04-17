@@ -4,13 +4,20 @@ public class Main {
     public static void main(String[] args) {
         String letters = "ABC \t abc \r\n 123!";
         System.out.println(letters);
-        for(char c : letters.toCharArray()){
+//        for(char c : letters.toCharArray()){ // TO RENABLE
+        for(int p = 0; p < letters.length(); p++) { //REMOVE ME 1
+            char c = letters.toCharArray()[p];      //REMOVE ME 2
             int i = (int) c;
+            System.out.print(p);
+            System.out.print(" ");
             System.out.print("'" + c + "'");
             System.out.print("=");
-            System.out.print((int) c);
-            System.out.print("\n") ;
-
+            System.out.print(i);
+            System.out.print(" ");
+            System.out.print(Integer.toString(i, 16));
+            System.out.print(" ");
+            System.out.print(Integer.toString(i, 2));
+            System.out.print("\n");
         }
     }
 }
